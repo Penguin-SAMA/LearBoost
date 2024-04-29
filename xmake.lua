@@ -2,9 +2,14 @@ add_rules("mode.debug", "mode.release")
 
 add_requires("boost")
 
-target("LearnAsio")
+target("syncClient")
 set_kind("binary")
-add_files("src/*.cpp")
+add_files("src/syncClient.cpp")
+add_packages("boost")
+
+target("syncServer")
+set_kind("binary")
+add_files("src/syncServer.cpp")
 add_packages("boost")
 
 --
